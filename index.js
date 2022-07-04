@@ -57,4 +57,37 @@ function stars() {
     }
 }
 
+let carrot = document.getElementById("carrot");
+let home_text = document.getElementById("home-text");
+
+function set_rocket() {
+    let window_width = window.innerWidth;
+    let window_height = window.innerHeight;
+    let carrot_width = carrot.clientWidth;
+    let carrot_height = carrot.clientHeight;
+    
+    console.log(window_width);
+    console.log(window_height);
+    console.log(carrot_width);
+    console.log(carrot_height);
+    
+    carrot.style.width = window_width / 5 + "px";
+    carrot.style.marginLeft = (window_width / 4) + "px";
+    carrot.style.marginTop = (window_height / 4) + "px";
+    carrot.style.marginRight = (window_width / 8) + "px";
+
+    // home.style.width = window_height + "px";
+
+    home_text.style.marginTop = window_height / 5 + "px";
+    home_text.style.fontSize =  Math.sqrt(window_width * window_height) / 50 + "px";
+    home_text.style.width = window.innerWidth + "px";
+}
+
+window.onresize = function() {
+    set_rocket();
+}
+
+set_rocket();
+
+
 stars();

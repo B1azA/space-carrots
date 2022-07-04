@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="viewport" content="minimum-scale=1">
 		<link rel="stylesheet" href="style.css" />
 
@@ -14,6 +13,7 @@
 		<script src="https://kit.fontawesome.com/2695b1b3df.js" crossorigin="anonymous"></script>
 
 		<title>Space Carrots</title>
+        <script src="index.js" defer></script>
 	</head>
 
     <body>
@@ -22,13 +22,18 @@
 			<button id="project_btn">Project</button>
 			<button id="news_btn">News</button>
 			<button id="about_btn">About us</button>
-			<button id="language_btn"><i class="fa-solid fa-language"></i></button>
 		</div>
-
+        <button id="language_btn"><i class="fa-solid fa-language"></i></button>
+        
 		<section id="home">
-			<img id="carrot" src="images/Carrot.png" alt="Space Carrots">
-			<h1 id="home-header">Space Carrots</h1>
-			<article id="home-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris dolor felis, sagittis at, luctus sed, aliquam non, tellus. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat eu, orci. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Vivamus ac leo pretium faucibus. Nullam eget nisl. Fusce tellus. Aliquam id dolor. Nulla est. Integer vulputate sem a nibh rutrum consequat. Etiam bibendum elit eget erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. Etiam bibendum elit eget erat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim.</article>
+            <img id="carrot" src="images/Carrot.png" alt="Space Carrots">
+			<div id="home-text">
+                <h1 style="font-size: 40px; margin-bottom: 8px;">Space Carrots</h1>
+                <article>
+                    This is an article
+                    <br>about space carrots.
+                </article>
+            </div>
 		</section>
 		
 		<section id="project">
@@ -42,7 +47,5 @@
 		<section id="about_us">
 			<p>About us</p>
 		</section>
-
-		<script src="index.js"></script>
     </body>
 </html>

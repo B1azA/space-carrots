@@ -38,7 +38,7 @@ language_btn.onclick = function() {
 }
 
 function stars() {
-    let count = 100;
+    let count = 75;
     let scene = document.getElementById("home");
     let i = 0;
     while (i < count) {

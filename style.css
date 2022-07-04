@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Finlandica', sans-serif;
+}
+
+body {
+    background-color: rgb(35, 35, 90);
+    overflow-x: hidden;
+}
+
+:root {
+    --menu-height: 6vh;
+    --menu-min-height: 50px;
+    --home-min-height: 250px;
+    --min-width: 600px;
+    --space-color: rgb(22, 104, 176);
+    --background-color: rgb(35, 35, 90);
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: var(--menu-height);
+    min-height: var(--menu-min-height);
+    background-color: rgb(237, 145, 33);
+    overflow: hidden;
+    z-index: 999;
+    border-bottom: 2px solid black;
+    /* border-radius: 12px; */
+}
+
+#menu button {
+    position: relative;
+    float: left;
+    color: #000000;
+    text-align: center;
+    min-height: var(--menu-min-height);
+    padding: 0% 20px;
+    margin-left: 6px;
+    text-decoration: none;
+    font-size: 20px;
+    border: 2px solid black;
+    background-color: rgb(237, 115, 33);
+    border-radius: 12px;
+    height: 80%;
+    top: 10%;
+
+}
+
+#menu button:active {
+    background-color: rgb(237, 145, 33);
+}
+
+#menu #language_btn {
+    float: right;
+    padding-right: 20px;
+    margin-left: 0px;
+    margin-right: 18px;
+}
+
+#home {
+    position: relative;
+    top: var(--menu-height);
+    width: 100vw;
+    height: 94vh;
+    min-height: var(--home-min-height);
+    min-width: var(--min-width);
+    background-color: var(--space-color);
+    /* rgb(43, 37, 63) */
+}
+
+#home-text {
+    position: relative;
+    top: 20%;
+    left: 45%;
+    width: 50%;
+    z-index: 1;
+}
+
+#home-header {
+    position: relative;
+    top: 15%;
+    left: 45%;
+    font-size: 40px;
+    z-index: 1;
+}
+
+#home i {
+    position: absolute;
+    top: -250px;
+    background-color: white;
+    animation: animate_stars linear infinite;
+}
+
+@keyframes animate_stars {
+    0% {
+        transform: translateY(0vh);
+    }
+    100% {
+        transform: translateY(200vh);
+    }
+}
+
+#carrot {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    max-height: 70%;
+    animation: animate_carrot 0.2s ease infinite;
+    z-index: 1;
+}
+
+@keyframes animate_carrot {
+    0% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+}
+
+#carrot::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-100px);
+    width: 10px;
+    height: 200px;
+    background: rgb(237, 145, 33);
+}
+
+section {
+    border-top: 2px solid #000000;
+}
+
+#project {
+    position: relative;
+    top: var(--menu-height);
+    width: 100vw;
+    height: 50vh;
+    background-color: var(--background-color);
+    z-index: 1;
+}
+
+#news {
+    position: relative;
+    top: var(--menu-height);
+    height: 50vh;
+    background-color: blue;
+}
+
+#about_us {
+    position: relative;
+    top: var(--menu-height);
+    height: 50vh;
+}

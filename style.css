@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Finlandica', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -64,28 +65,24 @@ body {
 #home {
     position: relative;
     top: var(--menu-height);
-    width: var(--width);
-    height: 100vh;
-    min-height: var(--home-min-height);
-    min-width: var(--min-width);
     background-color: var(--space-color);
     /* rgb(43, 37, 63) */
 }
 
 #home-text {
     position: relative;
-    top: 20%;
-    left: 45%;
-    width: 50%;
+    width: 30%;
     z-index: 1;
+    margin-left: 5%;
+    top:0;
 }
 
 #home-header {
     position: relative;
-    top: 15%;
-    left: 45%;
     font-size: 40px;
     z-index: 1;
+    margin-left: 3%;
+    margin-bottom: 1%;
 }
 
 #home i {
@@ -105,9 +102,10 @@ body {
 }
 
 #carrot {
-    position: absolute;
-    top: 20%;
-    left: 25%;
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 20%;
+    margin-left: 25%;
     max-height: 70%;
     animation: animate_carrot 0.2s ease infinite;
     z-index: 1;

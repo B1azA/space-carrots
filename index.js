@@ -33,9 +33,9 @@ about_btn.onclick = function() {
 
 let language_menu = document.createElement("language_menu");
 
-language_btn.onclick = function() {
-    document.appendChild(language_menu);
-}
+// language_btn.onclick = function() {
+//     document.appendChild(language_menu);
+// }
 
 function stars() {
     let count = 75;

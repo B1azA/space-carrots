@@ -93,18 +93,16 @@ body {
     padding: 2vw;
     display: block;
     overflow-wrap: break-word;
+    font-size: 20px;
 }
 
 #home-title {
     position: relative;
-    font-size: 60px;
-    margin-bottom: 8px;
-    margin-left: 10;
-    display: block;
-    overflow-wrap: break-word;
+    font-size: 5vw;
     margin-top: var(--menu-height);
-    left: 10%;
+    margin-left: 20%;
     z-index: 1;
+    text-overflow: ellipsis;
 }
 
 #home i {
@@ -126,7 +124,7 @@ body {
 #carrot {
     position: relative;
     max-height: 70%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 20%;
     margin-right: 5%;
     float: left;

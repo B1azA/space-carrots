@@ -69,25 +69,18 @@ function resize() {
     let carrot_height = carrot.clientHeight;
     let average = Math.sqrt(window_width * window_height);
     
-    console.log(window_width);
-    console.log(window_height);
-    console.log(carrot_width);
-    console.log(carrot_height);
-    
-    carrot.style.height = window_height / 2 + "px";
+    carrot.style.height = window_height / 3 + "px";
     carrot.style.marginLeft = (window_width / 4) + "px";
     carrot.style.marginRight = (window_width / 8) + "px";
 
-    // home.style.width = window_height + "px";
+    home_text.style.width = window.innerWidth + "px";
 
-    home_text.style.marginTop = average / 5 + "px";
-    home_text.style.width = window.innerWidth + "px"; // delete if text overflows
-
-    home.style.minHeight = window_height + "px";
-    home.style.height = window_height + "px";
+    let min_height = carrot.clientTop + carrot.clientHeight + "px";
+    home.style.minHeight = min_height + "px";
+    console.log(min_height);
 
     home_title.style.marginTop = menu.clientHeight + average / 10 + "px";
-    let centre = (window_width / 2) - (home_title.clientWidth / 2);
+    home_title.style.maxWidth = window.width + "px";
 }
 
 window.onresize = function() {

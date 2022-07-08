@@ -38,10 +38,12 @@ body {
     position: relative;
     color: #000000;
     text-align: center;
-    padding: 10px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: 6px;
     text-decoration: none;
-    font-size: 98%;
+    font-size: 100%;
     border: 2px solid black;
     background-color: rgb(237, 115, 33);
     border-radius: 12px;
@@ -56,17 +58,17 @@ body {
 #language_btn {
     position: fixed;
     line-height: 100%;
-    height: 5%;
-    width: 5%;
-    top: 0.5%;
-    left: 93%;
+    height: 5vw;
+    width: 5vw;
+    right: 0.5%;
+    bottom: 0.5%;
     background-color: red;
     z-index: 999;
 
     color: #000000;
     text-align: center;
     text-decoration: none;
-    font-size: auto;
+    font-size: 175%;
     border: 2px solid black;
     background-color: rgb(237, 115, 33);
     border-radius: 12px;
@@ -80,16 +82,29 @@ body {
     position: relative;
     top: var(--menu-height);
     background-color: var(--space-color);
-    min-height: 100vh;
+    height: 100vh;
     /* rgb(43, 37, 63) */
 }
 
 #home-text {
     position: relative;
     z-index: 1;
-    top:0;
+    top: 0;
+    padding: 2vw;
     display: block;
     overflow-wrap: break-word;
+}
+
+#home-title {
+    position: relative;
+    font-size: 60px;
+    margin-bottom: 8px;
+    margin-left: 10;
+    display: block;
+    overflow-wrap: break-word;
+    margin-top: var(--menu-height);
+    left: 10%;
+    z-index: 1;
 }
 
 #home i {
@@ -115,7 +130,6 @@ body {
     margin-left: 20%;
     margin-right: 5%;
     float: left;
-    width: 7.5%;
     animation: animate_carrot 0.2s ease infinite;
     z-index: 1;
 }

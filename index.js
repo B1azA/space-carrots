@@ -47,6 +47,7 @@ function stars() {
 
         let duration = Math.random() * 2;
         let h = Math.random() * 100;
+        star.style.position = "absolute";
         star.style.left = x + "px";
         star.style.width = 1 + "px";
         star.style.height = h + "px";
@@ -59,35 +60,39 @@ function stars() {
 
 let carrot = document.getElementById("carrot");
 let home_text = document.getElementById("home-text");
+let home_title = document.getElementById("home-title");
 
-function set_rocket() {
+function resize() {
     let window_width = window.innerWidth;
     let window_height = window.innerHeight;
     let carrot_width = carrot.clientWidth;
     let carrot_height = carrot.clientHeight;
+    let average = Math.sqrt(window_width * window_height);
     
     console.log(window_width);
     console.log(window_height);
     console.log(carrot_width);
     console.log(carrot_height);
     
-    carrot.style.width = window_width / 5 + "px";
+    carrot.style.height = window_height / 2 + "px";
     carrot.style.marginLeft = (window_width / 4) + "px";
-    carrot.style.marginTop = (window_height / 4) + "px";
     carrot.style.marginRight = (window_width / 8) + "px";
 
     // home.style.width = window_height + "px";
 
-    home_text.style.marginTop = window_height / 5 + "px";
-    home_text.style.fontSize =  Math.sqrt(window_width * window_height) / 50 + "px";
-    home_text.style.width = window.innerWidth + "px";
+    home_text.style.marginTop = average / 5 + "px";
+    home_text.style.width = window.innerWidth + "px"; // delete if text overflows
+
+    home.style.minHeight = window_height + "px";
+    home.style.height = window_height + "px";
+
+    home_title.style.marginTop = menu.clientHeight + average / 10 + "px";
+    let centre = (window_width / 2) - (home_title.clientWidth / 2);
 }
 
 window.onresize = function() {
-    set_rocket();
+    resize();
 }
 
-set_rocket();
-
-
+resize();
 stars();
